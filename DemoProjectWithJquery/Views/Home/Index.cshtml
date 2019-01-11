@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/Validation.js"></script>
+<h1 style="margin-top:5%">Insert Data</h1>
+@using (Html.BeginForm("", ""))
+{
+    <input type="hidden" id="Id" />
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="EmployeeId">Name</label>
+            <input type="text" class="form-control" id="Name" placeholder="Enter your Name.." />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Name">Email</label>
+            <input type="text" class="form-control" id="Email" placeholder="Enter your Email.." />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Age">Username</label>
+            <input type="text" class="form-control" id="Username" placeholder="Enter your Username.." />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="State">Password</label>
+            <input type="text" class="form-control" id="Password" placeholder="Enter your Password.." />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Number">Number</label>
+            <input type="text" class="form-control OnlyNumber" id="Number" placeholder="Enter your Number.." />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Image">Upload Image</label>
+            <input type="file" class="form-control" id="ImageUpload" />
+        </div>
+        <div class="form-group col-md-6">
+            <input type="button" class="btn btn-primary" id="submit" value="Submit" />
+        </div>
+        <div class="form-group col-md-6">
+            <input type="button" class="btn btn-primary" id="update" onclick="Update()" value="Update" />
+        </div>
+    </div>
+
+    
+}
+<h1>Your Data</h1>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Username
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Number
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="tbody"></tbody>
+</table>
